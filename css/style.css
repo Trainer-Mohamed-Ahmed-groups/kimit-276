@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+/* #myId {
+    color: green;
+}
+section {
+    color: #0000ff50;
+} */
+
+.mySection {
+    color: #2d3436;
+    background-color: #a29bfe;
+    text-align: center;
+}
+
+/* selector {
+    property: value;
+    } */
+.linear {
+    /* background: linear-gradient(45deg, #f00, #00f); */
+    background: repeating-linear-gradient(#f00, #00f);
+    height: 300px;
+    width: 300px;
+}
+.radial {
+    height: 300px;
+    width: 300px;
+    background: radial-gradient(#f00, #000);
+    /* background: repeating-radial-gradient(black, transparent 30px); */
+    background: conic-gradient(#f00, #000);
+}
+
+/*
+camel case  => employeeEmail
+kebab case  => employee-email
+snake case  => employee_email
+pascal case => EmployeeEmail
+*/
+
+.bgExplain {
+    height: 400px;
+    /*
+    background-image: url("../images/tiger.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;*/
+    background: url("../images/tiger.jpg") center fixed no-repeat red;
+    opacity: 0.25;
+}
+p {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    line-height: 30px;
+    word-spacing: 16px;
+    letter-spacing: 6px;
+    font-weight: 800;
+}
