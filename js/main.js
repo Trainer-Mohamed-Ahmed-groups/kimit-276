@@ -1,211 +1,215 @@
-console.log("Hello external")
+let x = 5;
+
+if (x == 10) console.log("OK")
+else if (x === 5) { console.log("NO"); }
+else { console.log("NONE"); }
 
 
-var username = "Mohamed",
-    lastName = "Ali";
-console.log(username)
-console.log(username + " " + lastName) // Concatenation
-console.log(`${username} ${lastName}`) // Concatenation
-username = "Ahmed"; //string
-console.log(username);
-console.log(typeof username)
+// ES 6
+// Ternary Operator
+5 > 4 ? console.log("YES") : console.log("NO");
 
-let age = 25;
-console.log(age)
+let result = 50;
 
-age = 30; // number
-console.log(age)
-console.log(typeof age)
+result > 100 ? console.log("BIG") : console.log("SMALL");
 
-const country = "Egypt";
-console.log(country)
+let score = 5;
 
-// country = "USA"; // This will cause an error
-// console.log(country)
+let grade = score > 50 ? "PASS" : "FAIL";
+
+console.log(grade)
 
 
-console.log("first")
+console.log(5 % 2)
+console.log(4 % 2)
+
+var myNumber = 10;
+
+if (myNumber % 2 == 0) {
+    console.log("EVEN");
+} else {
+    console.log("ODD");
+}
+
+myNumber % 2 == 0 ? console.log("EVEN") : console.log("ODD");
 
 
-/* Data types */
-const isVisited = false; // Boolean
-console.log(isVisited)
-console.log(typeof isVisited)
+// let username = prompt("Please enter your name"), password = +prompt('Please enter your password');
 
-console.log("******************")
-var found;
-console.log(found) // undefined
-console.log(typeof found)
+// console.log(username)
+// console.log(password)
 
-console.log("******************")
+// if (username === "admin" && password === 1234) {
+//     console.log("WELCOME ADMIN");
+// } else {
+//     console.log("ACCESS DENIED");
+// }
 
-var salary = null;
-console.log(typeof salary);
 
-console.log(document.getElementById('test'))
+let NewScore = 75
 
-var x = 10;
-console.log(x)
+if (NewScore >= 90 && NewScore <= 100) {
+    console.log("A");
+}
+
+
+
+// var employees2 = new Array("Ahmed", "Sayed", "Ali", "Omar", "Mahmoud");
+
+// console.log(typeof employees2)
+// console.log(employees2)
+// console.log(employees2.length)
+
+var employees = ["Ahmed", "Sayed", "Ali", "Omar", "Mahmoud", "Gamal", "Amr"],
+    hr = ["Samah", "Eman", "Nour"];
+
+console.log(typeof "")
+console.log(typeof employees)
+console.log(employees)
+console.log(employees.length)
+console.log(employees[0])
+console.log(employees[1])
+console.log(employees[employees.length - 1])
+console.log(employees.at(-2))
+
+
+/* Array methods */
+console.log(employees.concat(hr))
+console.log(employees.join(" - "))
+
+
+
+console.log("first second".split(" "))
+
+
+/************************* Array methods ****************************/
+var arr1 = ["Mohamed", "Ahmed", "Ali", "Omar", "Mohamed", 5, 8, 87, 12],
+    arr2 = ["Mahmoud", "Omar", "Shimaa"],
+    arr3 = [5, 6];
+
+
+/********************************************* concatenation ****************
+
+console.log(arr1.concat(arr2, arr3));
+
+/*********************************************  copy *
+
+console.log(arr1.copyWithin(1, 0));
+
+console.log(arr1);
+
+/*********************************************   fill ***************
+
+console.log(arr1.fill("Js", 2, 4));
+
+
+/*********************************************   includes **************/
+console.log(arr1);
+console.log(arr1.includes("Mohamed"));
+
+/*********************************************   index of  **************
+console.log(arr1);
+
+console.log(arr1.indexOf("Mohamed"));
+
+console.log(arr1.indexOf("Ahme")) //error
+
+/*********************************************   last index of  **************/
+console.log(arr1);
+console.log(arr1.lastIndexOf("Mohamed"))
+
+/*********************************************   is array **************/
+
+console.log(Array.isArray(arr1))
+
+/*********************************************   join **************/
+console.log(arr1.join(" & "));
+console.log(typeof arr1.join(""));
+
+/*********************************************   pop ************** x >> from main array *
+console.log(arr1);
+console.log(arr1.pop());
+console.log(arr1);
+
+/*********************************************   shift ************** from main array *
+console.log(arr1);
+console.log(arr1.shift());
+console.log(arr1);
+/*********************************************   push ************** X >>> *
+console.log(arr1);
+arr1.push("MO");
+console.log(arr1);
+
+/*********************************************   unshift **************
+console.log(arr1);
+arr1.unshift("MO2");
+console.log(arr1);
+
+/*********************************************   splice *************
+console.log(arr1);
+
+console.log(arr1.splice(2, 3, "A", "B", "C")); // remove and add
+
+console.log(arr1);
+/*********************************************   reverse **************
+console.log(arr1);
+console.log(arr1.reverse());
+
+/*********************************************   sort **************
+
+var newArr = ["Mohamed", "Ali", "aza", 12, "aac", "abb"];
+console.log(newArr.sort());
+
+console.log([23, 32, 332, 2014, 123, 220].sort((a, b) => a - b)); // Ascending
+
+/*********************************************   slice **************/
+console.log(arr1);
+console.log(arr1.slice(2, 4));
+console.log(arr1);
+
+/*********************************************   to string **************/
+
+console.log(arr1.toString());
+console.log(typeof arr1.toString());
+// */
+
+
+
+////////////////////////////////////////////////////////////////////
 /*
-1- reserved words in JavaScript not allowed as variable names
-2- variable name should not start with a number
-3- no special characters allowed except _ and $
-4- no spaces allowed in variable names
-5- case sensitive
-6- use camelCase for multi-word variable names
+1- contatenate two arrays and check if any item is num or not ( use every and typeof ) and output if greater then 3 .
+
+2- create  a prompt to get tasks and push all in an array then output all at tour page .
+
+3- create a  three prompt ages  and get it's values then check if any one is under age or not
+EXAMPLE >>> [25 , 5 ,  12 , 25 , 55]
+OUTPUT >>> you have all is not +18 (with every if return true) && you have just 5 and 12 is underage (with if condition)
+
+
+
+
+4- create four prompt get text values then (display it in console ordered with sort ) [like >> 1-Mohamed]
+
+5- create an array when you find (no) then convert all next elements in array to (thanks)
+EXAMPLE >>> ["Mohamed" , 1 , "Hey" , "no" ,"Front" , "JS"]
+OUTPUT >>> ["Mohamed" , 1 , "Hey" , "no" ,"thanks" , "thanks"]
+hint : user loop , if and fill()
 */
 
-/* Naming conventions
-1- camelCase
-2- PascalCase
-3- snake_case
-4- kebab-case (not allowed in JS)
-*/
 
+let y = 10;
+console.log(y)
 
-// var firstName = prompt("Enter your first name");
-// console.log("Your first name is: " + firstName);
+{
+    let y = 20;
+    console.log(y)
+}
+console.log(y)
 
+// { var u = 10; }
+// console.log(u)
 
-// Binary arithmetic operators: +, -, *, /, % , **
-
-var a = 10;
-var b = 3;
-
-console.log(12 % 3)
-
-console.log(5 ** 4)
-// Unary arithmetic operators: ++, --
-
-var c = 5;
-console.log(c)
-c++;
-console.log(c); // 6
-console.log(++c) // 7
-console.log(c--) // 7
-console.log(c) // 6
-
-
-// Assignment operators: =, +=, -=, *=, /=, %=
-console.log("****************")
-var i = 20;
-console.log(i)
-
-// i = i + 5;
-i %= 5;
-console.log(i)
-
-
-// Comparison operators: ==, ===, !=, !==, >, <, >=, <=
-console.log("****************")
-let m = 10;
-let n = "10";
-
-console.log(m == n) // true
-console.log(m === n) // false
-console.log(m != 10) // false
-console.log(m !== n) // true
-console.log("50" > 40);
-console.log(5 * "4");
-console.log(5 + "4");
-
-
-//  Logical operators: &&, ||, !
-console.log("****************")
-console.log(!true)
-console.log(5 > 4 && 20 > 15)
-console.log(5 > 5 || 20 > 15)
-
-
-console.log(5 && 8 && 10);
-console.log(5 && 0 && 10);
-console.log(5 && " " && 10);
-console.log(5 && undefined && 10);
-console.log(5 && null && 10);
-// And operator returns the first falsy value or the last value if all are truthy
-
-
-console.log(5 || 8 || 10);
-console.log(5 || 0 || 10);
-console.log(5 || " " || 10);
-console.log(undefined || 9 || 10);
-console.log(5 || null || 10);
-// Or operator returns the first truthy value or the last value if all are falsy
-
-
-// String methods
-console.log(new String)
-
-let academy = "Kimit Academy",
-    AcademyLocation = "Nasr city";
-
-console.log(academy.length)
-console.log(academy.charAt(0))  // K
-console.log(academy.charAt(academy.length - 1))  // y
-console.log(academy.charCodeAt(0))  // 75
-console.log(academy.indexOf("a")) // 6
-console.log(academy.lastIndexOf("a")) // 8
-console.log(academy.indexOf("z")) // -1
-console.log(academy + " " + AcademyLocation)
-console.log(`${academy} ${AcademyLocation}`)
-console.log(academy.concat(AcademyLocation))
-console.log(academy.toUpperCase())
-console.log(academy.toLowerCase())
-console.log(academy.includes("de"))
-console.log(academy.startsWith("Kie"))
-console.log(academy.endsWith("ky"))
-console.log(academy.slice(2, 7))
-console.log(academy.substring(2, 7))
-console.log(academy.substr(2, 7))
-console.log(academy.replace("i", "e"))
-console.log(academy.replaceAll("i", "e"))
-console.log(academy.split(''))
-console.log(academy.split(' '))
-
-
-var user = "Ahmed Ali";
-console.log(user.slice(0, 5))
-console.log(user.split(' ')[0])
-
-// "Kimit Academy"
-var regex = /a/igm
-
-console.log(typeof regex)
-console.log(academy.match(regex))
-console.log(academy.search(/a/i))
-console.log(regex.test(academy))
-
-
-let input = "12 34 Gfr@5#$ 8e78T6";
-
-console.log(input.match(/\d/g))
-console.log(input.match(/\D/g))
-
-console.log(input.match(/\w/g))
-console.log(input.match(/\W/g))
-
-console.log(input.match(/\s/g))
-console.log(input.match(/\S/g))
-
-
-console.log(input.match(/./g))
-console.log(input.match(/^\w/g))
-console.log(input.match(/\w$/g))
-
-console.log(input.match(/[a-z,A-Z]/g))
-console.log(input.match(/[1-5]/g))
-console.log(input.match(/[^1-5]/g))
-
-let userId = "Ahmed_12";
-console.log(userId.match(/^[A-Z,a-z]*_?\d+$/g))
-console.log(userId.match(/^[A-Z,a-z]{3,}[_]{1}\d{2,}$/g))
-console.log(userId.match(/^[A-Z,a-z]{3,}[_]{1}\d?$/g))
-
-
-
-let email = "test@example.";
-
-let emailPattern = /^\S+@\S+\.\S+$/;
-
-
-console.log((emailPattern.test(email) && "Valid Email") || "Invalid Email");
+// Redeclare : with var is allowed but with let & const is not allowed
+// Reassign : with var & let is allowed but with const is not allowed
+// Block scope :  const & let is block scope but var is not
+// Hoisting : var (Global scope) is hoisted but let & const are not hoisted
