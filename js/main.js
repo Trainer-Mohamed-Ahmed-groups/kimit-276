@@ -1,215 +1,272 @@
-let x = 5;
-
-if (x == 10) console.log("OK")
-else if (x === 5) { console.log("NO"); }
-else { console.log("NONE"); }
-
-
-// ES 6
-// Ternary Operator
-5 > 4 ? console.log("YES") : console.log("NO");
-
-let result = 50;
-
-result > 100 ? console.log("BIG") : console.log("SMALL");
-
-let score = 5;
-
-let grade = score > 50 ? "PASS" : "FAIL";
-
-console.log(grade)
-
-
-console.log(5 % 2)
-console.log(4 % 2)
-
-var myNumber = 10;
-
-if (myNumber % 2 == 0) {
-    console.log("EVEN");
-} else {
-    console.log("ODD");
+var car = {
+    model: 2022,
+    name: "mercedes",
+    country: "Germany",
+    isSold: false,
+    isSold: true,
+    owner: {
+        firstName: "Mohamed",
+        lastName: "Ahmed"
+    },
+    previous: [1, 2, 3, 4, 5]
 }
+// Key (property ) : value
+console.log(car)
 
-myNumber % 2 == 0 ? console.log("EVEN") : console.log("ODD");
+// Bracket notation
+console.log(car["name"])
+console.log(car["owner"]["lastName"])
+console.log(car["previous"][2])
+
+// Dot notation
+console.log(car.country)
+console.log(car.owner.lastName)
+console.log(car.previous[2])
+
+console.log(Object.keys(car))
+// console.log(Object())
+////////////////////////////////////////////////////////////////
+
+let mySet = new Set([1, 20, 32, 4, 4, 1, 6]);
+
+console.log(mySet)
+
+// mySet.add(1);
+// mySet.add('some text');
+// mySet.add(true);
+console.log(mySet)
+console.log(mySet.size)
+mySet.delete(32);
+console.log(mySet)
+console.log(mySet.size)
+
+console.log(mySet.has(1));
+console.log(mySet.has(32));
+
+console.log(mySet.entries())
+
+mySet.clear()
+console.log(mySet)
 
 
-// let username = prompt("Please enter your name"), password = +prompt('Please enter your password');
+console.log(typeof mySet)
 
-// console.log(username)
-// console.log(password)
 
-// if (username === "admin" && password === 1234) {
-//     console.log("WELCOME ADMIN");
-// } else {
-//     console.log("ACCESS DENIED");
+/////////////////////////////////////////////
+const myMap = new Map()
+
+myMap.set("key1", 1)
+myMap.set("key2", 20)
+myMap.set(50, 30)
+console.log(myMap)
+console.log(myMap.get("key2"))
+
+
+
+////////////////////////////////////////////////
+
+console.log("*".repeat(20))
+// let i = 0;
+// while (i <= 10) {
+//     console.log(i)
+//     i += 2
 // }
 
+// console.log(i)
 
-let NewScore = 75
+console.log("*".repeat(20))
+let u = 1;
 
-if (NewScore >= 90 && NewScore <= 100) {
-    console.log("A");
+do {
+    console.log(u);
+    u++;
+} while (u <= 10);
+
+console.log("*".repeat(20))
+
+for (let i = 0; i <= 10; i++) {
+    console.log(i)
+}
+// console.log(i) // ERROR
+
+
+var employees = ["Ahmed", "Nour", "Aya", "Mazen", "Malak"];
+
+for (let index = 0; index < employees.length; index++) {
+    const element = employees[index];
+    console.log(element)
 }
 
 
+var myNumbers = [1, 2, 3, 4, 5, 6, 7],
+    even = [];
 
-// var employees2 = new Array("Ahmed", "Sayed", "Ali", "Omar", "Mahmoud");
-
-// console.log(typeof employees2)
-// console.log(employees2)
-// console.log(employees2.length)
-
-var employees = ["Ahmed", "Sayed", "Ali", "Omar", "Mahmoud", "Gamal", "Amr"],
-    hr = ["Samah", "Eman", "Nour"];
-
-console.log(typeof "")
-console.log(typeof employees)
-console.log(employees)
-console.log(employees.length)
-console.log(employees[0])
-console.log(employees[1])
-console.log(employees[employees.length - 1])
-console.log(employees.at(-2))
+for (let index = 0; index < myNumbers.length; index++) {
+    const element = myNumbers[index];
+    if (element % 2 === 0) {
+        even.push(element)
+    }
+}
+console.log(even)
 
 
-/* Array methods */
-console.log(employees.concat(hr))
-console.log(employees.join(" - "))
+let myStrings = ['a', 'b', 'c', 'a', 'c', 'a', 'z'],
+    result = new Map(),
+    result2 = {}
 
+for (let index = 0; index < myStrings.length; index++) {
+    const myString = myStrings[index];
+    // if (result.has(myString)) {
+    //     result.set(myString, result.get(myString) + 1)
+    // } else {
+    //     result.set(myString, 1)
+    // }
 
+    // /////////////////////////////////////////
+    // result.set(myString, (result.get(myString) !== undefined ? result.get(myString) : 0) + 1)
+    result.set(myString, (result.get(myString) || 0) + 1)
+    // /////////////////////////////////////////
 
-console.log("first second".split(" "))
+    result2[myString] = (result2[myString] || 0) + 1
 
+}
+// {'a' : 3 } {'b' : 1} {'c' : 2}
 
-/************************* Array methods ****************************/
-var arr1 = ["Mohamed", "Ahmed", "Ali", "Omar", "Mohamed", 5, 8, 87, 12],
-    arr2 = ["Mahmoud", "Omar", "Shimaa"],
-    arr3 = [5, 6];
-
-
-/********************************************* concatenation ****************
-
-console.log(arr1.concat(arr2, arr3));
-
-/*********************************************  copy *
-
-console.log(arr1.copyWithin(1, 0));
-
-console.log(arr1);
-
-/*********************************************   fill ***************
-
-console.log(arr1.fill("Js", 2, 4));
-
-
-/*********************************************   includes **************/
-console.log(arr1);
-console.log(arr1.includes("Mohamed"));
-
-/*********************************************   index of  **************
-console.log(arr1);
-
-console.log(arr1.indexOf("Mohamed"));
-
-console.log(arr1.indexOf("Ahme")) //error
-
-/*********************************************   last index of  **************/
-console.log(arr1);
-console.log(arr1.lastIndexOf("Mohamed"))
-
-/*********************************************   is array **************/
-
-console.log(Array.isArray(arr1))
-
-/*********************************************   join **************/
-console.log(arr1.join(" & "));
-console.log(typeof arr1.join(""));
-
-/*********************************************   pop ************** x >> from main array *
-console.log(arr1);
-console.log(arr1.pop());
-console.log(arr1);
-
-/*********************************************   shift ************** from main array *
-console.log(arr1);
-console.log(arr1.shift());
-console.log(arr1);
-/*********************************************   push ************** X >>> *
-console.log(arr1);
-arr1.push("MO");
-console.log(arr1);
-
-/*********************************************   unshift **************
-console.log(arr1);
-arr1.unshift("MO2");
-console.log(arr1);
-
-/*********************************************   splice *************
-console.log(arr1);
-
-console.log(arr1.splice(2, 3, "A", "B", "C")); // remove and add
-
-console.log(arr1);
-/*********************************************   reverse **************
-console.log(arr1);
-console.log(arr1.reverse());
-
-/*********************************************   sort **************
-
-var newArr = ["Mohamed", "Ali", "aza", 12, "aac", "abb"];
-console.log(newArr.sort());
-
-console.log([23, 32, 332, 2014, 123, 220].sort((a, b) => a - b)); // Ascending
-
-/*********************************************   slice **************/
-console.log(arr1);
-console.log(arr1.slice(2, 4));
-console.log(arr1);
-
-/*********************************************   to string **************/
-
-console.log(arr1.toString());
-console.log(typeof arr1.toString());
-// */
-
-
-
-////////////////////////////////////////////////////////////////////
-/*
-1- contatenate two arrays and check if any item is num or not ( use every and typeof ) and output if greater then 3 .
-
-2- create  a prompt to get tasks and push all in an array then output all at tour page .
-
-3- create a  three prompt ages  and get it's values then check if any one is under age or not
-EXAMPLE >>> [25 , 5 ,  12 , 25 , 55]
-OUTPUT >>> you have all is not +18 (with every if return true) && you have just 5 and 12 is underage (with if condition)
-
-
-
-
-4- create four prompt get text values then (display it in console ordered with sort ) [like >> 1-Mohamed]
-
-5- create an array when you find (no) then convert all next elements in array to (thanks)
-EXAMPLE >>> ["Mohamed" , 1 , "Hey" , "no" ,"Front" , "JS"]
-OUTPUT >>> ["Mohamed" , 1 , "Hey" , "no" ,"thanks" , "thanks"]
-hint : user loop , if and fill()
-*/
-
-
-let y = 10;
-console.log(y)
-
+console.log(result2)
+console.log(result)
+var test =
 {
-    let y = 20;
-    console.log(y)
+    a: 10,
+    b: 1,
+    c: 1
 }
-console.log(y)
+console.log(test.a)
 
-// { var u = 10; }
-// console.log(u)
+console.log("*".repeat(20))
+console.log("*".repeat(20))
 
-// Redeclare : with var is allowed but with let & const is not allowed
-// Reassign : with var & let is allowed but with const is not allowed
-// Block scope :  const & let is block scope but var is not
-// Hoisting : var (Global scope) is hoisted but let & const are not hoisted
+for (let index = 1; index <= 10; index++) {
+    // if (index % 2 === 1) continue;
+    // if (index % 2 === 0) continue;
+    if (index === 5) break;
+    console.log(index)
+}
+console.log("*".repeat(20))
+
+// for (let index = 1; index <= 10; index += 2) {
+for (let index = 1; index <= 10; index++) {
+    if (index % 2 === 0) continue;
+    console.log(index)
+}
+
+console.log("*".repeat(20))
+
+
+for (let i = 1; i <= 10; i++) {
+    console.log("i => " + i)
+    for (let j = 1; j <= 10; j++) {
+        console.log(i + j)
+    }
+    console.log("----")
+}
+
+let customers = [["Ahmed", 20], ["Ali", 50], ["Ibrahim", 24]]
+
+for (let i = 0; i < customers.length; i++) {
+    const customer = customers[i];
+
+    for (let j = 0; j < customer.length; j++) {
+        const data = customer[j];
+        console.log(data)
+    }
+    // console.log(customer)
+}
+
+
+for (const str of myStrings) {
+    console.log(str)
+}
+
+console.log("*************")
+// for (const key in car) {
+
+//     // const element = car[key];
+//     console.log(car[key])
+
+// }
+for (const i in myStrings) {
+
+    console.log(i)
+
+}
+
+// Use for in [1,2,3,4,8,8] print sum
+let nums = [1, 2, 3, 8, 4, 8],
+    result3 = 0
+
+// for (const element of nums) {
+//     result3 += element
+// }
+
+for (const index in nums) {
+    result3 += nums[index]
+}
+console.log(result3)
+/////////////////////////////////////////////////////////////////
+
+sayHello()
+// Declaration function : Can hoisted
+function sayHello() {
+    console.log("Hello")
+}
+
+// Expression || anonymous function  : Not hoisted
+var sayHello2 = function () {
+    console.log("Hello 2 ")
+}
+sayHello2()
+
+// Arrow function
+
+var multi = (x = 1, y = 1) => { x * y }
+
+console.log(multi(8, 5))
+
+console.log(typeof sayHello)
+console.log(typeof sayHello2)
+console.log(typeof multi)
+
+
+/* Returning value function & void function */
+
+function sayHello4() {
+    return 5
+}
+
+console.log(sayHello4())
+console.log(sayHello4() * 5)
+
+/* Function with parameters */
+
+function sum(x = 0, y = 0) {
+    return x + y
+}
+
+console.log(sum(6, 9))
+console.log(sum(60, 79))
+console.log(sum(60))
+console.log(sum())
+
+
+
+function outer() {
+
+    let outerVar = "I am outside!";
+
+    function inner() { console.log(outerVar); }
+
+    return inner();
+
+}
+
+outer()
