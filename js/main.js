@@ -1,106 +1,91 @@
-var arr = new Array(5).fill('test')
-
-console.log(arr)
-
-
-var myNum = 5.872;
-
-console.log(Math.E)
-console.log(Math.round(5.3))
-console.log(Math.round(5.5))
-console.log(Math.ceil(5.01))
-console.log(Math.floor(5.99))
-console.log(Math.random())
-console.log(Math.random() * 10)
-console.log(Math.round(Math.random() * 10))
-console.log(Math.PI) // 22/7
-
-// .9999 * 10 = 9.999 Ceil => 10 Floor => 9
-// .0001 * 10 = .001  Ceil => 1  Floor => 0
+console.log(document)
+console.log(document.head)
+console.log(document.body)
+console.log(document.forms)
+console.log(document.images)
+console.log(document.links)
 
 
-var employees = ["Ahmed", "Ali", "Mohamed", "Khaled", "Sayed"]
+var myId = document.getElementById('myId'),
+    myClass = document.getElementsByClassName('myClass'),
+    myTag = document.getElementsByTagName("div"),
+    myName = document.getElementsByName('username')
 
-console.log(Math.floor(Math.random() * 4))
-
-
-console.log(employees[Math.floor(Math.random() * employees.length)])
-
-console.log(Math.pow(5, 3))
-console.log(Math.sqrt(25))
-var myNums = [45, 87, 5, 15, 48, 43, 1, 40, 7]
-console.log(Math.max(...myNums))
-console.log(Math.min(...myNums))
-console.log(...myNums)
+console.log(myId)
+console.log(myClass)
+console.log(myTag)
+console.log(myTag.myId)
+console.log(myName)
 
 
-///////////////////////////////////////////////////
+let myClass2 = document.querySelectorAll('.parent > .myClass')
+
+console.log(myClass2)
 
 
-
-console.log(Number.MAX_SAFE_INTEGER)
-console.log(Number.MIN_SAFE_INTEGER)
-console.log(Number.MAX_VALUE)
-console.log(Number.MIN_VALUE)
-console.log(Number.isFinite(1 / 0))
-console.log(Number.isInteger(55))
+console.log(myName[1].getAttribute("placeholder"))
 
 
-var x = 500.4623
-console.log(parseInt(x))
-console.log(parseFloat(x))
-console.log(x.toPrecision(2))
-console.log(x.toFixed(2))
-
-
-const myDate = new Date();
-
-console.log(myDate)
-
-
-const d = new Date("2024-12-28");
-const b = new Date("2025-01-05");
-
-console.log(d.getTime() / 1000 / 60 / 60 / 24)
-console.log(b.getTime() / 1000 / 60 / 60 / 24)
-console.log(b.getTime() / 1000 / 60 / 60 / 24 - d.getTime() / 1000 / 60 / 60 / 24)
-
-
-/************************************************** */
-
-let person = {
-    name: "Ali",
-    age: 50,
-    gender: "Male"
+function addNewAttr() {
+    myName[0].setAttribute('kimit', 'academy')
 }
 
-// let name = person.name,
-//     age = person.age;
-let { name: username, age } = person
-
-console.log(person)
-console.log(username)
-console.log(age)
 
 
 
-export let students = ["Ali", "Khaled", "Othman"]
+let myPasswordInput = document.getElementById('userPass'),
+    passwordBtn = document.querySelector('#passwordBtn')
 
-let [leader, , member] = students;
-
-console.log(leader)
-console.log(member)
-
-///////////////////////////////
-export function sum(a, b, ...c) {
-    console.log(c)
-    return a + b
+console.log(passwordBtn)
+function handleShow() {
+    // if (myPasswordInput.getAttribute('type') === 'password') {
+    //     myPasswordInput.setAttribute('type', 'text')
+    //     passwordBtn.textContent = "Hide"
+    // } else {
+    //     myPasswordInput.setAttribute('type', 'password')
+    //     passwordBtn.textContent = "Show"
+    // }
 }
 
-console.log(sum(5, 8, 3, 4, 5, 8))
+
+/******************************************************* */
+var myCreatedTag = document.createElement('p'),
+    myText = document.createTextNode('This is from Js'),
+    myComment = document.createComment("This comment from JS"),
+    output = document.getElementById('output');
 
 
-//////////////////////////////
+myCreatedTag.append(myText, myComment)
+console.log(myCreatedTag)
 
-var x = 5
-export default x;
+
+// output.appendChild(myCreatedTag)
+
+
+console.log(output.innerHTML)
+output.innerHTML += 'Hello Js'
+
+var myName = "Mohamed"
+
+output.innerHTML = `<div>This is div from JS => ${myName}</div>`
+
+
+// Todo
+
+let testDivision = document.getElementById('testDivision');
+function handleClass() {
+    // testDivision.style.fontWeight = 'bold'
+    // testDivision.className = "text-blue"
+
+
+    // testDivision.classList.add('text-blue')
+    // testDivision.classList.remove('test')
+    // testDivision.classList.toggle('text-blue')
+    // console.log(testDivision.classList.contains('test'))
+    console.log(testDivision.classList.item(1))
+}
+
+
+console.log(document.getElementsByClassName('parent')[0].children)
+console.log(document.getElementsByClassName('parent')[0].childNodes)
+console.log(document.getElementsByClassName('parent')[0].children[2].children[0])

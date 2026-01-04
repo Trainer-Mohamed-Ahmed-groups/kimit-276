@@ -8,9 +8,73 @@
     <meta name="keywords" content="Learning ,education">
     <meta name="author" content="Mohamed Ahmed">
     <title>Home page</title>
+
+    <style>
+        #testDivision {
+            height: 300px;
+            width: 300px;
+            background-color: rgb(66, 255, 29);
+        }
+
+        .text-blue {
+            color: #0c0cca;
+            text-shadow: 2px 2px rgb(114, 222, 42);
+            font-size: 1.5rem;
+        }
+
+        .test {
+            text-align: center;
+        }
+
+        input[placeholder] {
+            border: 20px solid #dd1010;
+        }
+    </style>
 </head>
 
 <body>
+    <form action="">
+        <input type="text" name="username">
+    </form>
+    <form action="">
+        <input type="text" name="username" placeholder="Enter your name">
+    </form>
+
+    <img src="" alt="sdsdf">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+
+    <a href=""></a>
+
+    <div id="myId">This division has an ID</div>
+
+    <div class="parent">
+        <div class="myClass">This division has class</div>
+        <!-- Comment -->
+        <div class="myClass">This division has class</div>
+        <div class="test">
+            <div class="myClass">This division has class</div>
+        </div>
+    </div>
+    <div class="myClass">This division has class</div>
+    <button onclick="addNewAttr()">click me</button>
+
+    <hr>
+    <input type="password" name="userPass" id="userPass">
+    <button onclick="handleShow()" id="passwordBtn">Show</button>
+
+    <hr>
+
+    <div id="output">test</div>
+
+    <hr>
+    <div id="testDivision" class="test testOne">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non
+        facilis
+        mollitia quo
+        quam est, molestias ipsam reiciendis quae nesciunt necessitatibus voluptas, tempore atque eveniet ratione
+        deleniti iusto accusamus ex?</div>
+    <button onclick="handleClass()">Handle class button</button>
     <script src="./js/main.js"></script>
 </body>
 
