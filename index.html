@@ -4,12 +4,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title>Zay</title>
+
+    <style>
+        .test .row>div {
+            border: 1px solid #000;
+            text-align: center;
+            padding: 20px 0;
+            background-color: lightgreen;
+        }
+
+        .parent {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .child {
+            background-color: lightblue;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media (min-width: 768px) {
+
+            /* 1 TO 768 */
+            .child {
+                width: 50%;
+            }
+        }
+
+        @media (min-width: 1200px) {
+
+            /* 1 TO 1200 */
+            .child {
+                width: 25%;
+            }
+        }
+
+        /* 1300 */
+    </style>
 </head>
 
 <body>
-    <ol id="output">Loading....</ol>
-    <script src="./js/main.js"></script>
+    <div class="container-fluid test">
+
+        <div class="row">
+            <div class="col-12 col-md-6 col-xl">test</div>
+            <div class="col-12 col-md-6 col-xl">test</div>
+            <div class="col-12 col-md-6 col-xl">test</div>
+            <div class="col-12 col-md-6 col-xl">test</div>
+        </div>
+    </div>
+    <table class="table table-success table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>John</td>
+                <td>Doe</td>
+                <td>@social</td>
+            </tr>
+        </tbody>
+    </table>
+    <label for="range4" class="form-label">Example range</label>
+    <input type="range" class="form-range" min="0" max="100" value="50" id="range4">
+    <output for="range4" id="rangeValue" aria-hidden="true"></output>
+
+    <form action="">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
+    </form>
+    <div class="container">
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">Username</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" id="validationCustomUsername"
+                        aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                        Please choose a username.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">City</label>
+                <input type="text" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">State</label>
+                <select class="form-select" id="validationCustom04" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>...</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid state.
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom05" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="validationCustom05" required>
+                <div class="invalid-feedback">
+                    Please provide a valid zip.
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+        </form>
+    </div>
+    <input type="text" class="form-control w-50 mx-auto" name="" id="">
+    <!-- <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+    </div> -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // This is an example script, please modify as needed
+        const rangeInput = document.getElementById('range4');
+        const rangeOutput = document.getElementById('rangeValue');
+
+        // Set initial value
+        rangeOutput.textContent = rangeInput.value;
+
+        rangeInput.addEventListener('input', function () {
+            rangeOutput.textContent = this.value;
+        });
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
 </body>
 
 </html>
