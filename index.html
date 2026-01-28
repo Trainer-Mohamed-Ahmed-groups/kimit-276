@@ -4,110 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <title>Zay</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <title>Document</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar scroll</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Link
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Link</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+    <h1 class="text-3xl font-bold underline text-red-500">
+        Hello world!
+    </h1>
+    <div
+        class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
+        <div>
+            <div class="text-xl font-medium text-black dark:text-white">ChitChat</div>
+            <p class="text-gray-500 dark:text-gray-400">You have a new message!</p>
+        </div>
+    </div>
+    <div href="#" class="group rounded-lg p-8 bg-emerald-400!">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor atque voluptatum nihil, necessitatibus
+            repellat nobis ad modi in porro accusamus quae id, sunt nesciunt quis ullam assumenda possimus nisi animi.
+            Temporibus explicabo necessitatibus officia, distinctio nam architecto odio esse quaerat nobis similique
+            itaque omnis obcaecati aliquam iusto numquam suscipit magnam laborum delectus adipisci optio! Quidem dolores
+            ipsum sed expedita perferendis.
+            Soluta dolorem quia sunt tempore eos, voluptate aliquam? Doloribus, esse libero. Fugit blanditiis quis
+            architecto, deleniti adipisci ducimus quaerat rerum eligendi. Atque, eaque. Deserunt odio aut iusto tempora,
+            recusandae laboriosam.</p>
+        <span class="group-hover:underline">Read more…</span>
+    </div>
+
+
+    <div class="card text-test">test </div>
+    <div class="card">test </div>
+    <div class="card">test </div>
+    <div class="card">test </div>
+    <div class="card">test </div>
+
+    <!-- component -->
+    <div class="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+        <div class="max-w-sm w-full bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all">
+            <div class="relative">
+                <img src="https://placehold.co/400x300" alt="Product" class="w-full h-52 object-cover" />
+                <span class="absolute top-3 right-3 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    Sale
+                </span>
+            </div>
+
+            <div class="p-5 space-y-4">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900">Classic T-Shirt</h3>
+                    <p class="text-gray-500 mt-1">Premium cotton blend</p>
+                </div>
+
+                <div class="flex justify-between items-center">
+                    <div class="space-y-1">
+                        <p class="text-2xl font-bold text-gray-900">$49.99</p>
+                        <p class="text-sm text-gray-500 line-through">$69.99</p>
+                    </div>
+
+                    <div class="flex items-center gap-1">
+                        <div class="text-yellow-400">★★★★</div>
+                        <div class="text-gray-300">★</div>
+                        <span class="text-sm text-gray-600 ml-1">(42)</span>
+                    </div>
+                </div>
+
+                <button
+                    class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 rounded-lg transition-colors shadow-2xs">
+                    Add to Cart
+                </button>
             </div>
         </div>
-    </nav>
-    <div class="btn-group">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
-            data-bs-display="static" aria-expanded="false">
-            Right-aligned but left aligned when large screen
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
-            <li><button class="dropdown-item" type="button">Action</button></li>
-            <li><button class="dropdown-item" type="button">Another action</button></li>
-            <li><button class="dropdown-item" type="button">Something else here</button></li>
-        </ul>
     </div>
-    <ul class="list-group list-group-horizontal">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-    </ul>
-    <hr>
-    <ul class="list-group list-group-horizontal-sm">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-    </ul>
-    <hr>
-    <ul class="list-group list-group-horizontal-md">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-    </ul>
-    <hr>
-    <ul class="list-group list-group-horizontal-lg">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-    </ul>
-    <hr>
-    <ul class="list-group list-group-horizontal-xl">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-    </ul>
-    <hr>
-    <ul class="list-group list-group-horizontal-xxl">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-    </ul>
-    <hr>
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-        </ul>
-    </nav>
-    <div class="d-lg-none">hide on lg and wider screens</div>
-    <div class="d-none d-lg-block">hide on screens smaller than lg</div>
-    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <h1>rthfhf</h1>
 </body>
 
 </html>

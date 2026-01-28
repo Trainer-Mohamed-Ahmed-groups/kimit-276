@@ -1,0 +1,6 @@
+npm i sass -g
+
+File => sass src/sass/style.scss dist/css/style.css
+
+
+Folder => sass src/sass:dist/css -w --style=compressed

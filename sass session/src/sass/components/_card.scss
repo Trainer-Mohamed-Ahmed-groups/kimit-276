@@ -1,0 +1,32 @@
+@use "../helpers/variables";
+@use "../helpers/mixins";
+.parent {
+    font-weight: bold;
+    .child {
+        color: variables.$main-color;
+        @include mixins.mainBorder(1500px, 1030px);
+        p {
+            text-align: center;
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    color: rgb(150, 225, 10);
+                }
+
+                &.tea {
+                    text-transform: capitalize;
+                    display: flex;
+                    justify-content: center;
+                    background-color: variables.$main-color;
+                    @include mixins.mainBorder($y: 10px);
+
+                    &::after {
+                        content: "okssfdfs";
+                    }
+                }
+            }
+        }
+    }
+}

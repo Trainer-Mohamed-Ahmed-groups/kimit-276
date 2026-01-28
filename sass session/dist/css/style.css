@@ -1,0 +1,47 @@
+.parent {
+  font-weight: bold;
+}
+.parent .child {
+  color: rgb(75, 57, 210);
+  height: 1500px;
+  width: 1030px;
+  border: 7px solid #eee;
+}
+.parent .child p {
+  text-align: center;
+}
+.parent .child p a {
+  text-decoration: none;
+}
+.parent .child p a:hover {
+  color: rgb(150, 225, 10);
+}
+.parent .child p a.tea {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(75, 57, 210);
+  height: 100px;
+  width: 10px;
+  border: 7px solid #eee;
+}
+.parent .child p a.tea::after {
+  content: "okssfdfs";
+}
+
+.about .ty, .about .t {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.about {
+  height: 100px;
+  width: 100px;
+  border: 7px solid #eee;
+}
+.about .t {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */
