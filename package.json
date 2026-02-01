@@ -1,7 +1,7 @@
 {
   "name": "kimit-276",
   "version": "1.0.0",
-  "description": "Tailwind session",
+  "description": "",
   "homepage": "https://github.com/Trainer-Mohamed-Ahmed-groups/kimit-276#readme",
   "bugs": {
     "url": "https://github.com/Trainer-Mohamed-Ahmed-groups/kimit-276/issues"
@@ -11,14 +11,13 @@
     "url": "git+https://github.com/Trainer-Mohamed-Ahmed-groups/kimit-276.git"
   },
   "license": "ISC",
-  "author": "Mohamed Ahmed",
+  "author": "",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.18",
-    "tailwindcss": "^4.1.18"
+  "devDependencies": {
+    "typescript": "^5.9.3"
   }
 }
